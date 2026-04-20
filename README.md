@@ -6,35 +6,30 @@
 
 ## 제출 방법
 
-Claude에게 아래를 복사해서 말하면 됩니다:
+Claude Code에 아래 프롬프트를 복사해서 붙여넣으세요.
 
 ```
-lk-ai-camp2-biz-showcase 레포를 clone하고,
+https://github.com/arin-ship-it/lk-ai-camp2-biz-showcase 레포를 clone하고,
 내 영문이름/showcase 브랜치를 만들어줘.
 submissions/내영어이름/ 폴더에 template/SHOWCASE.md를 복사하고,
 나를 채우는 걸 도와줘.
 다 끝나면 커밋하고 PR 만들어줘.
+PR 완료되면, PR 올라간 링크도 제시해줘.
 ```
-
-(예: nova/showcase, mj/showcase)
 
 ---
 
-## SHOWCASE.md 작성 항목
+## 진행 과정
 
-| # | 항목 |
-|---|------|
-| ① | 해결하고 싶은 문제 |
-| ② | 기존 방식의 병목 |
-| ③ | 지향했던 방향성 |
-| ④ | 현재 구현 단계 |
-| ⑤ | 추후 과제 |
-| ⑥ | 배운 점 / 소감 |
+1. 레포 클론
+2. 내 브랜치 만들기 (`영문이름/showcase`)
+3. `submissions/영문이름/` 폴더에 템플릿 복사
+4. SHOWCASE.md 작성 (①~⑥ 항목 채우기)
+5. 커밋 & PR 올리기
+6. [전체 PR 목록](https://github.com/arin-ship-it/lk-ai-camp2-biz-showcase/pulls)에서 다른 팀원 제출물 보기
 
 ---
 
 ## 참고
 
-- 완벽하지 않아도 됩니다 — "시도한 것" 자체가 중요해요
-- 스킬 파일, 스크린샷 등 추가 파일도 같은 폴더에 넣어도 OK
 - 막히면 DM 주세요
