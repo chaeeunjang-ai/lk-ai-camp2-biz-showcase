@@ -9,14 +9,14 @@
 Claude에게 아래를 복사해서 말하면 됩니다:
 
 ```
-lk-ai-camp2-사업팀-showcase 레포를 clone하고,
+lk-ai-camp2-biz-showcase 레포를 clone하고,
 내 영문이름/showcase 브랜치를 만들어줘.
 submissions/내영어이름/ 폴더에 template/SHOWCASE.md를 복사하고,
 나를 채우는 걸 도와줘.
 다 끝나면 커밋하고 PR 만들어줘.
 ```
 
-(예: yuna/showcase, minho/showcase)
+(예: nova/showcase, mj/showcase)
 
 ---
 
