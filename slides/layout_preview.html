@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>레이아웃 프리뷰 — AI Camp2 Showcase</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+/* ── 디자인 토큰 (generate_slides.py 그대로) ─────────── */
+:root {
+  --bg:     #f0e8d8;   /* 슬라이드 배경 */
+  --text:   #252422;   /* 다크 프라이머리 */
+  --text2:  #403D39;   /* 본문 */
+  --accent: #e07a5f;   /* 포인트 */
+  --sub:    #CCC5B9;   /* 서브 */
+  --dark:   #3d3d3d;   /* 다크 배경 */
+  --panel:  #e5ddd0;   /* 콘텐츠 패널 */
+  --panel2: #d9d0c1;   /* 패널 내 대비 영역 */
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #b8b0a8;
+  font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+  padding: 56px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+/* 섹션 라벨 */
+.section-label {
+  width: 960px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: -48px;
+  letter-spacing: 0.04em;
+}
+.section-label::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 16px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+/* 슬라이드 공통 */
+.slide {
+  width: 960px;
+  height: 540px;
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.28);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+}
+
+/* 페이지 번호 */
+.pn {
+  position: absolute;
+  bottom: 16px;
+  right: 24px;
+  font-size: 11px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* 헤더바 좌측 회사명 */
+.hbar {
+  position: absolute;
+  bottom: 14px;
+  left: 24px;
+  font-size: 11px;
+  color: var(--sub);
+}
+
+/* 배지 */
+.badge {
+  display: inline-block;
+  background: var(--text);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 12px;
+  letter-spacing: 0.1em;
+}
+
+/* 슬라이드 상단 공통 (배지 + 제목) */
+.s-top {
+  padding: 30px 80px 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+}
+.s-top .main-h {
+  font-size: 27px;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+
+/* ════════════════════════════════════════════════
+   Layout 1 — 목차 (TOC)
+════════════════════════════════════════════════ */
+.slide.toc { flex-direction: row; }
+
+.toc-l {
+  width: 285px;
+  padding: 0 46px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+.toc-l .big {
+  font-size: 52px;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.0;
+}
+
+.toc-r {
+  flex: 1;
+  background: var(--panel);
+  padding: 36px 46px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.toc-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--sub);
+}
+.toc-item:first-child { border-top: 1px solid var(--sub); }
+.t-num {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--sub);
+  min-width: 36px;
+  padding-top: 1px;
+}
+.t-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 3px; }
+.t-desc  { font-size: 11px; color: #999; }
+
+
+/* ════════════════════════════════════════════════
+   Layout 2/3/5 — 2컬럼 (이미지 / 표 / 차트 + 불릿)
+════════════════════════════════════════════════ */
+.two-col {
+  flex: 1;
+  margin: 0 56px 36px;
+  background: var(--panel);
+  display: flex;
+  overflow: hidden;
+  border-radius: 2px;
+}
+.tc-left {
+  flex: 1;
+  background: var(--panel2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.tc-right {
+  width: 43%;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.tc-right ul {
+  list-style: disc;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.tc-right li {
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--text2);
+}
+
+/* 이미지 플레이스홀더 */
+.img-placeholder {
+  width: 80%;
+  height: 65%;
+  background: #ccc0ae;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: #888;
+}
+
+/* 미니 표 */
+.m-table {
+  width: 95%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+.m-table th {
+  background: var(--text);
+  color: #fff;
+  padding: 7px 10px;
+  text-align: center;
+  font-weight: 700;
+}
+.m-table th:last-child { background: var(--accent); }
+.m-table td {
+  padding: 6px 10px;
+  text-align: center;
+  border-bottom: 1px solid #ccc4b5;
+  color: var(--text2);
+}
+.m-table tr:nth-child(even) td { background: rgba(0,0,0,0.04); }
+
+/* 막대 차트 */
+.bar-chart {
+  width: 88%;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.bar-row { display: flex; align-items: center; gap: 8px; }
+.bar-bg { flex: 1; height: 15px; background: rgba(0,0,0,0.1); }
+.bar-fill { height: 100%; }
+.bar-fill.a { background: var(--text); }
+.bar-fill.b { background: #9e9689; }
+.bar-val { font-size: 10px; color: #777; min-width: 22px; }
+
+
+/* ════════════════════════════════════════════════
+   Layout 4 — 줄글
+════════════════════════════════════════════════ */
+.prose-panel {
+  flex: 1;
+  margin: 0 56px 36px;
+  background: var(--panel);
+  padding: 26px 36px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.prose-sub {
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text);
+}
+.prose-body {
+  font-size: 13px;
+  line-height: 1.88;
+  color: var(--text2);
+}
+.prose-body mark {
+  background: var(--text);
+  color: #fff;
+  padding: 0 3px;
+  font-style: normal;
+}
+.prose-body strong { font-weight: 900; }
+
+
+/* ════════════════════════════════════════════════
+   Layout 6 — 순서 (프로세스 플로우)
+════════════════════════════════════════════════ */
+.proc-sub {
+  font-size: 13px;
+  color: #777;
+  text-align: center;
+  margin: -2px 80px 12px;
+}
+.proc-wrap { flex: 1; margin: 0 44px 30px; display: flex; flex-direction: column; }
+
+/* 화살표 헤더 */
+.proc-heads {
+  display: flex;
+  height: 40px;
+  margin-bottom: 4px;
+}
+.ph {
+  flex: 1;
+  background: #8a8478;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  position: relative;
+  margin-right: -12px;
+  padding: 0 14px 0 22px;
+  z-index: 5;
+}
+.ph:nth-child(2) { z-index: 4; }
+.ph:nth-child(3) { z-index: 3; }
+.ph:nth-child(4) { z-index: 2; }
+.ph:nth-child(5) { z-index: 1; }
+
+/* 오른쪽 화살표 팁 */
+.ph::after {
+  content: '';
+  position: absolute;
+  right: -12px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 12px solid #8a8478;
+  z-index: 1;
+}
+.ph.last {
+  background: var(--text);
+  margin-right: 0;
+  padding-left: 26px;
+}
+.ph.last::after { display: none; }
+
+/* 내용 행 */
+.proc-rows { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.pr { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; }
+.pc {
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--text2);
+  padding: 9px 10px;
+}
+.pr:nth-child(odd)  .pc { background: rgba(255,255,255,0.9); }
+.pr:nth-child(even) .pc { background: var(--panel); }
+
+
+/* ════════════════════════════════════════════════
+   Layout 7 — 비교표
+════════════════════════════════════════════════ */
+.cmp-sub {
+  font-size: 13px;
+  color: #777;
+  text-align: center;
+  margin: -2px 80px 12px;
+}
+.cmp-wrap { flex: 1; margin: 0 52px 30px; overflow: hidden; }
+.cmp-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+.cmp-table th {
+  padding: 11px 16px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+.cmp-table th.l { background: #7a7570; color: #fff; }
+.cmp-table th.m { background: var(--sub); color: var(--text); font-size: 11px; width: 16%; }
+.cmp-table th.r { background: var(--text); color: #fff; }
+.cmp-table td {
+  padding: 9px 14px;
+  font-size: 12px;
+  text-align: center;
+  color: var(--text2);
+  border-bottom: 1px solid #ccc4b5;
+  vertical-align: middle;
+}
+.cmp-table tr:nth-child(even) td { background: rgba(0,0,0,0.025); }
+.cmp-table td.m { background: #ddd7cc; color: #888; font-size: 11px; }
+.cmp-table td strong { font-weight: 900; }
+</style>
+</head>
+<body>
+
+<!-- ══ Layout 1: 목차 ══════════════════════════════════ -->
+<div class="section-label">Layout 1 — 목차 (TOC)</div>
+<div class="slide toc">
+  <div class="toc-l">
+    <span class="badge">Contents</span>
+    <div class="big">목차</div>
+  </div>
+  <div class="toc-r">
+    <div class="toc-item">
+      <div class="t-num">01</div>
+      <div><div class="t-title">문제 인식</div><div class="t-desc">해결하고 싶은 불편함과 비효율</div></div>
+    </div>
+    <div class="toc-item">
+      <div class="t-num">02</div>
+      <div><div class="t-title">기존 방식의 병목</div><div class="t-desc">반복 작업·시간 낭비 포인트</div></div>
+    </div>
+    <div class="toc-item">
+      <div class="t-num">03</div>
+      <div><div class="t-title">해결 방향성</div><div class="t-desc">AI로 만들고 싶었던 변화</div></div>
+    </div>
+    <div class="toc-item">
+      <div class="t-num">04</div>
+      <div><div class="t-title">현재 구현 단계</div><div class="t-desc">지금까지 만든 것, 완성도</div></div>
+    </div>
+    <div class="toc-item">
+      <div class="t-num">05</div>
+      <div><div class="t-title">추후 과제</div><div class="t-desc">아직 해결 못 한 것, 발전 방향</div></div>
+    </div>
+    <div class="toc-item">
+      <div class="t-num">06</div>
+      <div><div class="t-title">소감</div><div class="t-desc">캠프를 통해 느낀 것, 달라진 것</div></div>
+    </div>
+  </div>
+  <div class="hbar">AI Camp2 Showcase</div>
+  <div class="pn">1</div>
+</div>
+
+
+<!-- ══ Layout 2: 소개 (이미지 + 불릿) ═══════════════════ -->
+<div class="section-label">Layout 2 — 소개 페이지 (이미지 + 불릿리스트)</div>
+<div class="slide">
+  <div class="s-top">
+    <span class="badge">소개</span>
+    <div class="main-h">주제 소개 페이지</div>
+  </div>
+  <div class="two-col">
+    <div class="tc-left">
+      <div class="img-placeholder">이미지 영역</div>
+    </div>
+    <div class="tc-right">
+      <ul>
+        <li>이어지는 내용에서 가장 중요한 키워드를 제목으로 활용해 보세요.</li>
+        <li>위 혹은 옆의 제목과 길이를 맞추면 좀 더 예쁘게 만들 수 있어요.</li>
+        <li>문장 앞에 번호나 글자를 붙이면 보다 깔끔하게 정리할 수 있어요.</li>
+        <li>청자가 할만한 질문이나 궁금증을 입력해 분위기를 환기할 수도 있지요.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="hbar">AI Camp2 Showcase</div>
+  <div class="pn">2</div>
+</div>
+
+
+<!-- ══ Layout 3: 표 (테이블 + 불릿) ════════════════════ -->
+<div class="section-label">Layout 3 — 표 페이지 (데이터 테이블 + 불릿리스트)</div>
+<div class="slide">
+  <div class="s-top">
+    <span class="badge">표</span>
+    <div class="main-h">정리하기 좋은 표 페이지</div>
+  </div>
+  <div class="two-col">
+    <div class="tc-left">
+      <table class="m-table">
+        <thead>
+          <tr><th></th><th>A사</th><th>B사</th><th>C사</th><th>D사</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>항목 1</td><td>✕</td><td>✕</td><td><strong>○</strong></td><td>○</td></tr>
+          <tr><td>항목 2</td><td>✕</td><td>○</td><td><strong>○</strong></td><td>✕</td></tr>
+          <tr><td>항목 3</td><td>○</td><td>✕</td><td><strong>○</strong></td><td>✕</td></tr>
+          <tr><td>항목 4</td><td>○</td><td>✕</td><td><strong>○</strong></td><td>✕</td></tr>
+          <tr><td>항목 5</td><td>✕</td><td>✕</td><td><strong>○</strong></td><td>○</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tc-right">
+      <ul>
+        <li>표의 각 항목에 어떤 내용이 포함되어 있는지 서술해 보세요.</li>
+        <li>상세 내용 형식은 다른 칸과 맞추는 것이 깔끔합니다.</li>
+        <li>특장이나 개념 외에도, 이해를 도울 예시를 적어주셔도 좋아요.</li>
+        <li>표에는 주로 데이터가 들어가므로 수치와 그에 맞는 단위를 입력해 보세요.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="hbar">AI Camp2 Showcase</div>
+  <div class="pn">3</div>
+</div>
+
+
+<!-- ══ Layout 4: 줄글 ══════════════════════════════════ -->
+<div class="section-label">Layout 4 — 줄글 페이지 (긴 텍스트)</div>
+<div class="slide">
+  <div class="s-top">
+    <span class="badge">안내</span>
+    <div class="main-h">안내할 내용을 줄글로 적은 페이지</div>
+  </div>
+  <div class="prose-panel">
+    <div class="prose-sub">해당 페이지는 많은 분량의 텍스트를 입력할 때 쓰기 좋은 페이지입니다.</div>
+    <div class="prose-body">
+      10줄 이상의 텍스트를 넣어야 할 때 이 페이지를 활용해보세요. 폰트는 Noto Sans KR, 폰트 크기는 13px입니다.
+      자간은 기본값, 행간은 1.9입니다. <mark>중요한 내용이나 길게 의견을 보여주어야 할 경우 해당 페이지를 활용해보세요.</mark>
+      프레젠테이션은 가독성이 생명입니다. 가독성의 핵심은 얼마나 내용을 간결하게 전달하는가 입니다.
+      쉽게 읽을 수 있고, 눈에 잘 띄는 것이 중요해요. 줄 글 중 강조하고 싶은 부분은
+      <strong>볼드체 또는 큰 사이즈로 표현</strong>해보세요. 구체적인 예시나 수치 등을 활용한다면 신뢰도를 높일 수 있어요.
+      텍스트가 아무리 많을지라도 보는 사람이 지루하지 않게 시각적 효과를 활용해보세요.
+    </div>
+  </div>
+  <div class="hbar">AI Camp2 Showcase</div>
+  <div class="pn">4</div>
+</div>
+
+
+<!-- ══ Layout 5: 그래프 (차트 + 불릿) ══════════════════ -->
+<div class="section-label">Layout 5 — 그래프 페이지 (막대 차트 + 불릿리스트)</div>
+<div class="slide">
+  <div class="s-top">
+    <span class="badge">그래프</span>
+    <div class="main-h">숫자를 막대로 표현한 그래프 페이지</div>
+  </div>
+  <div class="two-col">
+    <div class="tc-left">
+      <div class="bar-chart">
+        <div class="bar-row">
+          <div class="bar-bg"><div class="bar-fill a" style="width:27%"></div></div>
+          <div class="bar-val">20</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-bg"><div class="bar-fill b" style="width:53%"></div></div>
+          <div class="bar-val">40</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-bg"><div class="bar-fill a" style="width:53%"></div></div>
+          <div class="bar-val">40</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-bg"><div class="bar-fill b" style="width:80%"></div></div>
+          <div class="bar-val">60</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-bg"><div class="bar-fill a" style="width:100%"></div></div>
+          <div class="bar-val">75</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-bg"><div class="bar-fill b" style="width:67%"></div></div>
+          <div class="bar-val">50</div>
+        </div>
+      </div>
+    </div>
+    <div class="tc-right">
+      <ul>
+        <li>막대 그래프를 그리는 방법입니다.</li>
+        <li>조사한 항목과 기준을 가로 세로 중 어느 쪽에 나타낼지 정합니다.</li>
+        <li>최소 값과 최대 값을 나타낼 수 있도록 눈금의 크기와 수를 정합니다.</li>
+        <li>각 항목 별 수치에 맞도록 막대 그래프를 그립니다.</li>
+        <li>그린 막대 그래프에 알맞은 제목을 붙입니다.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="hbar">AI Camp2 Showcase</div>
+  <div class="pn">5</div>
+</div>
+
+
+<!-- ══ Layout 6: 순서 (프로세스 플로우) ════════════════ -->
+<div class="section-label">Layout 6 — 순서 페이지 (프로세스 플로우)</div>
+<div class="slide">
+  <div class="s-top">
+    <span class="badge">순서</span>
+    <div class="main-h">과정을 순서대로 보여주는 페이지</div>
+  </div>
+  <div class="proc-sub">왼쪽부터 차례대로 필요한 내용을 적어보세요.</div>
+  <div class="proc-wrap">
+    <div class="proc-heads">
+      <div class="ph">시기 상황</div>
+      <div class="ph">사건 설명</div>
+      <div class="ph">단추형 항목</div>
+      <div class="ph">이유 및 배경</div>
+      <div class="ph last">현재 설명</div>
+    </div>
+    <div class="proc-rows">
+      <div class="pr">
+        <div class="pc">시기 혹은 상황에 따라 어떤 일들이 있었는지 적어보세요.</div>
+        <div class="pc">특정한 사건을 설명하려면 이 공간을 활용해 보세요.</div>
+        <div class="pc">단추형 항목을 활용하면 많은 내용도 쉽게 정리할 수 있어요.</div>
+        <div class="pc">과정이 전개될 수 있었던 이유나 배경에 대해 적어보세요.</div>
+        <div class="pc">마지막엔 기나긴 과거가 모여 만들어낸, 현재에 관해 설명해 보세요.</div>
+      </div>
+      <div class="pr">
+        <div class="pc">시기 혹은 상황에 따라 어떤 일들이 있었는지 적어보세요.</div>
+        <div class="pc">특정한 사건을 설명하려면 이 공간을 활용해 보세요.</div>
+        <div class="pc">단추형 항목을 활용하면 많은 내용도 쉽게 정리할 수 있어요.</div>
+        <div class="pc">과정이 전개될 수 있었던 이유나 배경에 대해 적어보세요.</div>
+        <div class="pc">마지막엔 기나긴 과거가 모여 만들어낸, 현재에 관해 설명해 보세요.</div>
+      </div>
+    </div>
+  </div>
+  <div class="hbar">AI Camp2 Showcase</div>
+  <div class="pn">6</div>
+</div>
+
+
+<!-- ══ Layout 7: 비교표 ════════════════════════════════ -->
+<div class="section-label">Layout 7 — 비교 페이지 (3열 비교표)</div>
+<div class="slide">
+  <div class="s-top">
+    <span class="badge">비교</span>
+    <div class="main-h">두 가지 항목의 내용을 비교하는 페이지</div>
+  </div>
+  <div class="cmp-sub">비교할 항목의 공통점과 차이점을 적어보세요.</div>
+  <div class="cmp-wrap">
+    <table class="cmp-table">
+      <thead>
+        <tr>
+          <th class="l">기존 방식</th>
+          <th class="m">항목</th>
+          <th class="r">AI 활용 방식</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>기준이 되는 대조군/실험 집단 입니다.</td>
+          <td class="m">내용 입력</td>
+          <td>비교할 대상인 비교군/비교 집단 입니다.</td>
+        </tr>
+        <tr>
+          <td><strong>비교할 내용들을 기준에 따라 적어주세요.</strong></td>
+          <td class="m">내용 입력</td>
+          <td>비교군의 내용을 대조군의 기준에 따라 적어주세요.</td>
+        </tr>
+        <tr>
+          <td>숫자, 또는 텍스트로 비교할 내용을 입력해주세요.</td>
+          <td class="m">내용 입력</td>
+          <td>입력할 내용은 대조군과 통일된 형식의 데이터여야 합니다.</td>
+        </tr>
+        <tr>
+          <td>비교 내용을 풀어서 설명합니다.</td>
+          <td class="m">내용 입력</td>
+          <td><strong>서로 같은 공통점이 있으면 적어주세요.</strong></td>
+        </tr>
+        <tr>
+          <td>어느 부분이 같고 어느 부분이 다른지 적어주세요.</td>
+          <td class="m">내용 입력</td>
+          <td>비교 기준을 잡게 된 이유를 적어줘도 좋습니다.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="hbar">AI Camp2 Showcase</div>
+  <div class="pn">7</div>
+</div>
+
+</body>
+</html>
