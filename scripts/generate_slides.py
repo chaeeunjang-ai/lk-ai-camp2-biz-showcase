@@ -292,9 +292,36 @@ def build_presentation(persons: list[tuple[str, dict]]) -> str:
     return "\n\n---\n\n".join(chunks) + "\n"
 
 
+# ── CSS 최신화 ─────────────────────────────────────────────────────────────────
+
+def update_css():
+    """showcase.md의 YAML 프런트매터(CSS)만 MARP_HEADER로 교체한다. 콘텐츠는 유지."""
+    if not OUTPUT_MD.exists():
+        print(f"오류: {OUTPUT_MD} 파일이 없습니다.")
+        sys.exit(1)
+
+    content = OUTPUT_MD.read_text(encoding="utf-8")
+
+    # 첫 번째 --- ... --- 블록을 MARP_HEADER로 교체
+    # MARP_HEADER 자체가 ---로 시작하고 ---로 끝남
+    pattern = re.compile(r"^---\n.*?^---", re.DOTALL | re.MULTILINE)
+    m = pattern.search(content)
+    if not m:
+        print("오류: showcase.md에서 YAML 프런트매터를 찾을 수 없습니다.")
+        sys.exit(1)
+
+    updated = content[: m.start()] + MARP_HEADER + content[m.end() :]
+    OUTPUT_MD.write_text(updated, encoding="utf-8")
+    print(f"CSS 최신화 완료: {OUTPUT_MD}")
+
+
 # ── 메인 ───────────────────────────────────────────────────────────────────────
 
 def main():
+    if "--update-css" in sys.argv:
+        update_css()
+        return
+
     print("SHOWCASE.md 파일 수집 중...\n")
 
     if not SUBMISSIONS_DIR.exists():

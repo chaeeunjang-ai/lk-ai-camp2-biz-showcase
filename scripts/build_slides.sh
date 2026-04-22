@@ -16,7 +16,8 @@ if [ "$1" != "--html-only" ]; then
   echo "① SHOWCASE.md → slides/showcase.md 생성 중..."
   python3 "$REPO_ROOT/scripts/generate_slides.py"
 else
-  echo "① generate_slides.py 건너뜀 (--html-only 모드)"
+  echo "① CSS 최신화 중 (--html-only 모드)..."
+  python3 "$REPO_ROOT/scripts/generate_slides.py" --update-css
 fi
 
 echo "② Marp CLI → slides/showcase.html 빌드 중..."
