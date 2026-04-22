@@ -370,7 +370,7 @@ style: |
 # 현재 구현 단계
 <p class="slide-sub">자동화 전·후 비교</p>
 
-<table class="cmp-table"><thead><tr><th class="h-left">기존 방식</th><th class="h-mid">구분</th><th class="h-right">자동화 후</th></tr></thead><tbody><tr><td>함수 직접 작성, 일자별 수동 집계</td><td class="m-mid">데이터 분석</td><td>analyze.py — 5개 탭 결과 엑셀 자동 생성 + 결제 전환율 이메일 매칭 자동 계산</td></tr><tr><td>수치 수동 복붙, 고객사별 따로 정리</td><td class="m-mid">보고서</td><td>Notion DB 3개 자동 기록 + 바차트 포함 보고서 페이지 자동 생성</td></tr><tr><td>엑셀 직접 관리, 서식 매번 수동 적용</td><td class="m-mid">데이터 누적</td><td>Google Sheets 5탭 누적 업데이트 + 서식 자동 적용</td></tr></tbody></table>
+<table class="cmp-table"><thead><tr><th class="h-left">기존 방식</th><th class="h-mid">구분</th><th class="h-right">자동화 후</th></tr></thead><tbody><tr><td>신청자 수, 완강자 수, 결제자 수 수동 집계</td><td class="m-mid">데이터 분석</td><td>주요 수치 자동 분석 후 시트 업데이트 + 결제자 자동 매칭 및 분석</td></tr><tr><td>수치 수동 복붙, 고객사별 보고서 별도 생성</td><td class="m-mid">보고서</td><td>Notion DB 자동 기록 + 바차트 포함 보고서 페이지 자동 생성</td></tr><tr><td>데일리로 데이터 추적 불가</td><td class="m-mid">데이터 누적</td><td>Google Sheets에 데일리로 누적 업데이트 + 서식 자동 적용</td></tr></tbody></table>
 <span class="slide-footer">2026.04</span><span class="corner-sq"></span>
 
 ---
@@ -379,7 +379,7 @@ style: |
 <p class="slide-sub">앞으로 발전시키고 싶은 것, 그리고 이번 캠프를 통해 달라진 것</p>
 
 <p class="sec-label">⑤ 추후 과제</p>
-<ul><li>여러 파일 동시 처리 안정성 검증</li><li>인사이트 자동 생성 고도화 — 패턴 감지 및 액션 우선순위 자동 판단</li><li>고객사 바로 공유 가능한 보고서 포맷 자동화</li></ul>
+<ul><li>여러 파일 동시 처리 안정성 검증</li><li>인사이트 자동 생성 고도화 — 패턴 감지 및 액션 우선순위 자동 판단</li></ul>
 <hr class="sec-divider">
 <p class="sec-label">⑥ 소감</p>
 <p>개발 경험 없이도 실제로 동작하는 자동화 시스템을 만들 수 있다는 게 가장 큰 발견이었습니다. 세팅을 마치고 나니 업무 효율이 크게 높아졌고, 고객사 보고서 퀄리티도 올라갔습니다. 진작 시도해볼 걸 — 앞으로는 단순 반복은 Claude에 맡기고, 나는 생각하는 일에 집중하려 합니다.</p>
