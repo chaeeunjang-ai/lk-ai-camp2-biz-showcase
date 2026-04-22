@@ -359,9 +359,9 @@ style: |
 <p class="slide-sub">1,000~2,000명 규모 수강생 데이터를 매일 수동 집계 — 고객사가 늘수록 병목도 커졌습니다</p>
 
 <div class="two-col">
-  <div class="col-l"><p class="sec-label">① 문제 상황</p><p>매일 수강생 엑셀을 받아 신청자 수·완강률·결제 전환율 등을 직접 계산하고, 일자별·주차별·월별로 정리해 노션에 옮기는 작업을 반복해야 했습니다. 고객사가 늘수록 작업량도 늘고, 실수도 잦아졌습니다.</p>
+  <div class="col-l"><p class="sec-label">① 문제 상황</p><ul><li>매일 상시퍼널 클래스의 신청자 목록을 다운받아 신청자 수·완강률·결제 전환율 등을 직접 계산</li><li>고객사에 공유할 보고서가 필요한 경우 일자별·주차별·월별로 정리해 노션에 옮기는 작업 반복</li><li>상시퍼널을 적용하는 고객사가 빠르게 늘어남에 따라 소요 시간이 크게 늘 것으로 예상됨</li></ul>
 <hr class="sec-divider"><p class="sec-label">③ 지향했던 방향성</p><p>파일을 폴더에 드롭하고 "inbox 처리해줘" 한 마디면 분석·DB 기록·보고서 생성까지 자동 완료. 숫자가 아닌 인사이트에만 집중할 수 있는 구조.</p></div>
-  <div class="col-r"><p class="sec-label">② 기존 방식의 병목</p><ul><li>매번 함수 직접 작성 → 일자별 추적 어려움</li><li>파트별 이탈 시각화 불가</li><li>수치를 노션에 수동 복붙</li><li>결제 전환율 매칭 — 가장 오래 걸리고 오류 많음</li></ul></div>
+  <div class="col-r"><p class="sec-label">② 기존 방식의 병목</p><ul><li>매번 수동으로 카운트 및 분석 → 일자별 추적 어려움</li><li>파트별 이탈 시각화 불가</li><li>고객사의 이해를 도울 차트 등 시각화 어려움</li><li>결제 전환율 매칭 — 결제자 시트와 대조하며 추적</li></ul></div>
 </div>
 <span class="slide-footer">2026.04</span><span class="corner-sq"></span>
 
