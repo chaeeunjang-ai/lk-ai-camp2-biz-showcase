@@ -24,7 +24,7 @@ else
     echo "오류: marp 명령도 npx 도 없습니다. Node.js 를 먼저 설치해주세요." >&2
     exit 1
   fi
-  MARP=(npx -y @marp-team/marp-cli@latest)
+  MARP=(npx -y @marp-team/marp-cli@4)
 fi
 
 # ── 1단계: 마크다운 생성 / CSS 최신화 ─────────────────────

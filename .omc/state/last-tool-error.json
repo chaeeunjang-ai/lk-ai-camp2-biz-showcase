@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"ls /opt/homebrew/lib/node_modules/ 2>/dev/null; echo \\\"---\\\"; ls /opt/homebrew/lib/node_modules/@marp-team/ 2>/dev/null\",\"description\":\"Check marp-cli installation\"}",
+  "error": "Exit code 1\n@ast-grep\n@openai\nagent-browser\nccusage\ncorepack\nnpm\noh-my-claude-sisyphus\nwscat\n---",
+  "timestamp": "2026-04-22T08:01:17.335Z",
+  "retry_count": 1
+}

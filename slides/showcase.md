@@ -290,8 +290,152 @@ style: |
 ---
 
 <!-- _class: divider -->
-<!-- _header: "LK AI Camp 2기" -->
+<!-- _header: "**EVAN** · LK AI Camp 2기" -->
 
 # 우리가 만든 것들
 
 <span class="slide-footer">2026.04</span><span class="corner-sq"></span>
+
+---
+
+<!-- header: "**EVAN** · LK AI Camp 2기" -->
+<!-- === 발표자: Evan === -->
+
+<!-- _class: cover -->
+
+<div class="cover-title">Evan의<br>자동화 도구</div>
+<p class="cover-presenter"><strong>발표자</strong> 콘텐츠 디자이너 &nbsp;｜&nbsp; Evan</p>
+<div class="cover-tags"><span class="tag">신규 고객 온보딩 자동화</span><span class="tag">신규 온보딩 자동화: 미진행</span></div>
+<span class="slide-footer">2026.04</span><span class="corner-sq"></span>
+
+---
+
+# 문제와 해결 방향
+<p class="slide-sub">신규 고객 온보딩 자동화</p>
+
+<div class="two-col">
+  <div class="col-l"><p class="sec-label">① 문제 상황</p><ul><li>신규 고객 온보딩 자동화</li><li>고객사 상품 세일즈(무료 강의안, 상페, 모객 콘텐츠, 모객용 자료 등) 기획 자동화</li><li>통화 녹음 및 미팅 기록 자동화 (정리 요약 & 노션 DB에 텍스트데이터 입력까지)</li><li>신규 주제 도메인 이해도 높이기 (학습 튜터)</li></ul><hr class="sec-divider"><p class="sec-label">③ 지향했던 방향성</p><ul><li>신규 고객 온보딩 자동화: 부트캠프 Day 4같이 고객사 개인이 이용하는 LLM에 코드 입력 시 구현되는 구조</li><li>고객사 상품 세일즈 기획 자동화: 핵심 논리 방법론, 자료 업데이트 및 정교화 → 메모리 과다 이슈가 있어서 최근 통합 스킬에서 세부 개별 스킬로 전환해서 효율화 과정</li><li>통화 녹음 및 미팅 기록 자동화: 녹음파일 자동 전달 백그라운드 앱을 바이브코딩으로 생성하려 했으나, 현재 MacroDroid(구글 플레이스토어 앱)로 자동화 중</li><li>신규 주제 도메인 이해도 높이기: 라이브러리 형태로 주제별 세부 스킬 분리 및 관리 (지속 업데이트) + 교육학 근거로 빠르게 학습할 수 있는 시스템 프롬프트 제작하여 설정 예정</li></ul></div>
+  <div class="col-r"><p class="sec-label">② 기존 방식의 병목</p><table><thead><tr><th>병목 유형</th><th>구체적 문제</th></tr></thead><tbody><tr><td>병목</td><td>온보딩 → 개별 온/오프 미팅 외에 다른 선택지 없음 (가이드 문서 전달해봤으나, 불가 확인 / 대안은 사람</td></tr><tr><td>병목</td><td>고객사 상품 세일즈 기획 자동화 → 매번 새롭게 기획, 문서화, 미팅을 통해 전달</td></tr><tr><td>기록 자동화</td><td>매번 직접 기록</td></tr><tr><td>병목</td><td>신규 주제 도메인 이해도: 파편화된 정보를 리서치하고 취합하는 형태</td></tr></tbody></table></div>
+</div>
+<span class="slide-footer">2026.04</span><span class="corner-sq"></span>
+
+---
+
+# 현재 구현 단계
+<p class="slide-sub">자동화 전·후 비교</p>
+
+<table class="cmp-table"><thead><tr><th class="h-left">기존 방식</th><th class="h-mid">구분</th><th class="h-right">자동화 후</th></tr></thead><tbody><tr><td>온보딩 → 개별 온/오프 미팅 외에 다른 선택지 없음 (가이드 문서 전달해봤으나, 불가 확인 / 대…</td><td class="m-mid">비교</td><td>신규 온보딩 자동화: 미진행</td></tr><tr><td>고객사 상품 세일즈 기획 자동화 → 매번 새롭게 기획, 문서화, 미팅을 통해 전달</td><td class="m-mid">비교</td><td>상품 세일즈 기획 자동화: 일부 진행 중 (무료 강의안 기획부터)</td></tr><tr><td>기록 자동화: 매번 직접 기록</td><td class="m-mid">기록 자동화</td><td>기록 자동화: 아직 녹음 파일을 구글 드라이브로 자동 업로드하는 과정 해결 중</td></tr><tr><td>신규 주제 도메인 이해도: 파편화된 정보를 리서치하고 취합하는 형태</td><td class="m-mid">비교</td><td>신규 주제 학습 튜터: 미진행</td></tr></tbody></table>
+<span class="slide-footer">2026.04</span><span class="corner-sq"></span>
+
+---
+
+# 추후 과제 &amp; 소감
+<p class="slide-sub">앞으로 발전시키고 싶은 것, 그리고 이번 캠프를 통해 달라진 것</p>
+
+<p class="sec-label">⑤ 추후 과제</p>
+<ul><li>위 에이전트 완성 및 현재 진행 단계에서의 문제 해결</li></ul>
+<hr class="sec-divider">
+<p class="sec-label">⑥ 소감</p>
+<p>항상 AI는 미지의 영역처럼 막연히 느껴졌는데, AI의 작동 구조와 운영되는 방식에 대해서 배울 수 있어서 너무 좋았습니다. AI에 대해 배운 기틀이 잘 마련된 것 같고, 배운 내용을 기준으로 계속 업데이트해보겠습니다!</p>
+<span class="slide-footer">2026.04</span><span class="corner-sq"></span>
+
+<!-- === /발표자: Evan === -->
+
+---
+
+<!-- header: "**CHAEEUN JANG** · LK AI Camp 2기" -->
+<!-- === 발표자: Chaeeun Jang === -->
+
+<!-- _class: cover -->
+
+<div class="cover-title">Chaeeun Jang의<br>자동화 도구</div>
+<p class="cover-presenter"><strong>발표자</strong> 콘텐츠 디자이너 &nbsp;｜&nbsp; Chaeeun Jang</p>
+<div class="cover-tags"><span class="tag">상시퍼널 성과 분석을 위해 매일 </span><span class="tag">**analyze.py**: VOD </span></div>
+<span class="slide-footer">2026.04</span><span class="corner-sq"></span>
+
+---
+
+# 문제와 해결 방향
+<p class="slide-sub">상시퍼널 성과 분석을 위해 매일 상시퍼널용 무료 클래스와 유료 클래스의 수강생 목록을 다운받아 엑셀 파일을 수동으로 분석하고 데이터를 기입하는 </p>
+
+<div class="two-col">
+  <div class="col-l"><p class="sec-label">① 문제 상황</p><p>상시퍼널 성과 분석을 위해 매일 상시퍼널용 무료 클래스와 유료 클래스의 수강생 목록을 다운받아 엑셀 파일을 수동으로 분석하고 데이터를 기입하는 반복 작업이 병목이었습니다.</p>
+<p>고객사에 성과를 보고할 때에도 클래스마다 1,000~2,000명 규모의 수강생 데이터를 받아 신청자 수, 완강률, 파트별 시청률, 결제 전환율 등을 직접 계산하고, 일자별·주차별·월별로 각각 정리한 뒤 노션에 옮기는 작업을 반복해야 했습니다.</p>
+<p>상시퍼널을 적용하는 고객사가 늘어나면서 담당 클래스도 함께 늘어났고, 그에 비례해 이 작업에 드는 시간도 늘어났으며 실수가 생기기 쉬운 구조였습니다.</p><hr class="sec-divider"><p class="sec-label">③ 지향했던 방향성</p><p>엑셀 파일을 폴더에 드롭하고 "inbox 처리해줘" 한 마디만 하면 분석부터 보고서 생성까지 전부 자동으로 처리되는 시스템을 만들고 싶었습니다.</p>
+<p>결과물이 엑셀, 노션 DB, 노션 보고서 페이지, 구글 시트까지 한 번에 업데이트되어서, 숫자를 보고 인사이트를 도출하는 일에만 집중할 수 있는 구조를 목표로 했습니다.</p></div>
+  <div class="col-r"><p class="sec-label">② 기존 방식의 병목</p><p>엑셀 파일을 받으면 매번 직접 함수를 작성해 집계해야 했기 때문에, 매일 반복하기가 현실적으로 어려웠고 일자별 데이터를 꾸준히 추적하기도 힘들었습니다.</p>
+<p>파트별 이탈은 표로만 정리할 수 있었고 시각화가 불가능했습니다.</p>
+<p>완성된 수치를 노션에 고객사가 이해하기 쉬운 형태로 옮기는 데도 시간이 많이 걸렸습니다.</p>
+<p>유료 구매자 명단과 수강생 명단을 쿠폰코드와 수강생 인적사항으로 직접 매칭해 결제 전환율을 계산해야 했는데, 이 작업이 특히 오래 걸리고 오류가 많았습니다.</p></div>
+</div>
+<span class="slide-footer">2026.04</span><span class="corner-sq"></span>
+
+---
+
+# 현재 구현 단계
+<p class="slide-sub">자동화 전·후 비교</p>
+
+<table class="cmp-table"><thead><tr><th class="h-left">기존 방식</th><th class="h-mid">구분</th><th class="h-right">자동화 후</th></tr></thead><tbody><tr><td>—</td><td class="m-mid">비교</td><td>**analyze.py**: VOD 수강생 엑셀을 읽어 일자별·주차별·월별·전체기간·파트별 시청률 …</td></tr><tr><td>—</td><td class="m-mid">비교</td><td>**Notion 연동**: 분석 결과를 Notion DB 3개(일간 리포트, 인사이트 로그, 파트별…</td></tr><tr><td>—</td><td class="m-mid">비교</td><td>**Google Sheets 연동**: 결과 데이터를 구글 시트 5개 탭에 누적 업데이트. 서식(헤…</td></tr></tbody></table>
+<span class="slide-footer">2026.04</span><span class="corner-sq"></span>
+
+---
+
+# 추후 과제 &amp; 소감
+<p class="slide-sub">앞으로 발전시키고 싶은 것, 그리고 이번 캠프를 통해 달라진 것</p>
+
+<p class="sec-label">⑤ 추후 과제</p>
+<ul><li>여러 클래스 파일 동시 처리 시 안정성 검증 (10개 파일 동시 시나리오)</li><li>인사이트 자동 생성 고도화 (단순 수치 나열을 넘어 패턴 감지 및 액션 우선순위 자동 판단)</li><li>보고서를 고객사에 바로 공유할 수 있는 형태로 자동 포맷팅</li></ul>
+<hr class="sec-divider">
+<p class="sec-label">⑥ 소감</p>
+<p>개발 경험이 전혀 없는 상태에서 실제로 동작하는 자동화 시스템을 만들 수 있다는 게 가장 큰 발견이었습니다.</p>
+<p>수동 집계와 반복 작업에서 발생하던 실수와 시간 낭비가 줄어드니, 데이터를 보고 어떤 의미인지 해석하는 일에 더 집중할 수 있게 됐습니다.</p>
+<p>세팅 과정에서 어려운 부분도 있었지만, 한번 완성하고 나니 업무 효율이 크게 높아졌고 고객사에 전달하는 보고서의 퀄리티도 눈에 띄게 올라갔습니다.</p>
+<p>진작 시도해볼 걸 그랬다는 생각에 그동안 수작업하며 보낸 시간들이 스쳐 지나갔습니다. 앞으로 단순 반복 업무는 무조건 Claude에 맡기고, 나는 머리 쓰는 일에 집중하려고 합니다.</p>
+<span class="slide-footer">2026.04</span><span class="corner-sq"></span>
+
+<!-- === /발표자: Chaeeun Jang === -->
+
+---
+
+<!-- header: "**NOVA** · LK AI Camp 2기" -->
+<!-- === 발표자: Nova === -->
+
+<!-- _class: cover -->
+
+<div class="cover-title">Nova의<br>자동화 도구</div>
+<p class="cover-presenter"><strong>발표자</strong> 콘텐츠 디자이너 &nbsp;｜&nbsp; Nova</p>
+<div class="cover-tags"><span class="tag">단계마다 이전 히스토리를 직접 찾</span></div>
+<span class="slide-footer">2026.04</span><span class="corner-sq"></span>
+
+---
+
+# 문제와 해결 방향
+<p class="slide-sub">단계마다 이전 히스토리를 직접 찾아 복붙해야 했음. 상품 기획 → 랜딩 페이지 → 광고 소재 → 강의안 → CRM 문자까지 이어지는 5개 레이어</p>
+
+<div class="two-col">
+  <div class="col-l"><p class="sec-label">① 문제 상황</p><p>단계마다 이전 히스토리를 직접 찾아 복붙해야 했음. 상품 기획 → 랜딩 페이지 → 광고 소재 → 강의안 → CRM 문자까지 이어지는 5개 레이어가 각각 단절되어 있었고, 매 단계마다 "이전에 뭐라고 했더라"를 다시 찾는 반복 작업이 발생.</p><hr class="sec-divider"><p class="sec-label">③ 지향했던 방향성</p><p>데이터 → 기획 → 메시지 → 콘텐츠가 하나의 논리적 흐름으로 자동 연결되는 구조. 고객사 데이터만 넣으면 모든 하위 산출물이 같은 언어·논리·데이터를 기반으로 자동 생성.</p></div>
+  <div class="col-r"><p class="sec-label">② 기존 방식의 병목</p><p>각 산출물이 파편화된 문서/메모/채팅에 흩어져 있어서 광고 카피를 쓸 때 기획안을, 강의안 쓸 때 광고 카피를, CRM 문자 쓸 때 강의안을 다시 찾아 붙여넣는 구조. 논리적 일관성이 사람 손에 달려 있었음.</p></div>
+</div>
+<span class="slide-footer">2026.04</span><span class="corner-sq"></span>
+
+---
+
+# 현재 구현 단계
+<p class="slide-sub">자동화 전·후 비교</p>
+
+<table class="cmp-table"><thead><tr><th class="h-left">기존 방식</th><th class="h-mid">구분</th><th class="h-right">자동화 후</th></tr></thead><tbody><tr><td>—</td><td class="m-mid">비교</td><td>—</td></tr></tbody></table>
+<span class="slide-footer">2026.04</span><span class="corner-sq"></span>
+
+---
+
+# 추후 과제 &amp; 소감
+<p class="slide-sub">앞으로 발전시키고 싶은 것, 그리고 이번 캠프를 통해 달라진 것</p>
+
+<p class="sec-label">⑤ 추후 과제</p>
+<ul><li>우두머리 `02_상품_로드맵.md` 채우기 → 타겟분석 + 유료 상품 기획서 생성 테스트</li><li>01 디자인 기획안 레이어 자동화 설계 — 기획서가 완성되면 랜딩 페이지·광고 카피를 자동 파생시키는 구조</li><li>03 CRM 레이어 연결 — 기획 데이터가 사전/사후 문자 자동 생성까지 이어지는 파이프라인</li><li>루루이펙트·성장연구소 등 다른 고객사에 동일 구조 복제</li></ul>
+<hr class="sec-divider">
+<p class="sec-label">⑥ 소감</p>
+<p>"산출물을 만드는 게 아니라 산출물들이 연결되는 구조를 만들면, 이후 작업이 빨라진다." 지금까지 한 작업의 핵심은 각 기획 파일이 서로를 참조하는 의존성 구조를 코드처럼 명문화한 것. 이 구조가 잡히면 01~03 레이어도 같은 방식으로 확장 가능함.</p>
+<span class="slide-footer">2026.04</span><span class="corner-sq"></span>
+
+<!-- === /발표자: Nova === -->

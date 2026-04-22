@@ -1,0 +1,190 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1776843709172,
+  "projectRoot": "/Users/kobe/Downloads/lk-ai-camp2-biz-showcase",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "scripts"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "scripts": {
+      "path": "scripts",
+      "purpose": "Build/utility scripts",
+      "fileCount": 2,
+      "lastAccessed": 1776843709144,
+      "keyFiles": [
+        "build_slides.sh",
+        "generate_slides.py"
+      ]
+    },
+    "slides": {
+      "path": "slides",
+      "purpose": null,
+      "fileCount": 10,
+      "lastAccessed": 1776843709146,
+      "keyFiles": [
+        "layout_preview.html",
+        "showcase.001.png",
+        "showcase.002.png",
+        "showcase.003.png",
+        "showcase.004.png"
+      ]
+    },
+    "submissions": {
+      "path": "submissions",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1776843709147,
+      "keyFiles": []
+    },
+    "template": {
+      "path": "template",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1776843709151,
+      "keyFiles": [
+        "SHOWCASE.md",
+        "github_showcase_pr_prompt.md",
+        "slide_revision_prompt.md"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "scripts/generate_slides.py",
+      "accessCount": 10,
+      "lastAccessed": 1776845660944,
+      "type": "file"
+    },
+    {
+      "path": "slides/preview.001.png",
+      "accessCount": 3,
+      "lastAccessed": 1776845739673,
+      "type": "file"
+    },
+    {
+      "path": "slides/preview.002.png",
+      "accessCount": 2,
+      "lastAccessed": 1776845024638,
+      "type": "file"
+    },
+    {
+      "path": "slides/preview.003.png",
+      "accessCount": 2,
+      "lastAccessed": 1776845024863,
+      "type": "file"
+    },
+    {
+      "path": "slides/preview.004.png",
+      "accessCount": 2,
+      "lastAccessed": 1776845025620,
+      "type": "file"
+    },
+    {
+      "path": "slides/preview.005.png",
+      "accessCount": 2,
+      "lastAccessed": 1776845026621,
+      "type": "file"
+    },
+    {
+      "path": "slides/showcase.001.png",
+      "accessCount": 1,
+      "lastAccessed": 1776844111739,
+      "type": "file"
+    },
+    {
+      "path": "slides/showcase.002.png",
+      "accessCount": 1,
+      "lastAccessed": 1776844111896,
+      "type": "file"
+    },
+    {
+      "path": "slides/showcase.003.png",
+      "accessCount": 1,
+      "lastAccessed": 1776844112508,
+      "type": "file"
+    },
+    {
+      "path": "slides/showcase.004.png",
+      "accessCount": 1,
+      "lastAccessed": 1776844113509,
+      "type": "file"
+    },
+    {
+      "path": "slides/showcase.005.png",
+      "accessCount": 1,
+      "lastAccessed": 1776844113732,
+      "type": "file"
+    },
+    {
+      "path": "slides/showcase.006.png",
+      "accessCount": 1,
+      "lastAccessed": 1776844114221,
+      "type": "file"
+    },
+    {
+      "path": "slides/showcase.md",
+      "accessCount": 1,
+      "lastAccessed": 1776844316733,
+      "type": "file"
+    },
+    {
+      "path": "submissions/arin/SHOWCASE.md",
+      "accessCount": 1,
+      "lastAccessed": 1776844397013,
+      "type": "file"
+    },
+    {
+      "path": "slides/layout_preview.html",
+      "accessCount": 1,
+      "lastAccessed": 1776844402765,
+      "type": "file"
+    },
+    {
+      "path": "slides/theme.css",
+      "accessCount": 1,
+      "lastAccessed": 1776844752184,
+      "type": "file"
+    },
+    {
+      "path": "slides/preview.006.png",
+      "accessCount": 1,
+      "lastAccessed": 1776844956958,
+      "type": "file"
+    },
+    {
+      "path": "template/slide_revision_prompt.md",
+      "accessCount": 1,
+      "lastAccessed": 1776845316734,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}
