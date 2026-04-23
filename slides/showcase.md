@@ -370,7 +370,7 @@ style: |
 # 현재 구현 단계
 <p class="slide-sub">자동화 전·후 비교</p>
 
-<table class="cmp-table"><thead><tr><th class="h-left">기존 방식</th><th class="h-mid">구분</th><th class="h-right">자동화 후</th></tr></thead><tbody><tr><td>신청자 수, 완강자 수, 결제자 수 수동 집계</td><td class="m-mid">데이터 분석</td><td>주요 수치 자동 분석 후 시트 업데이트 + 결제자 자동 매칭 및 분석</td></tr><tr><td>수치 수동 복붙, 고객사별 보고서 별도 생성</td><td class="m-mid">보고서</td><td>Notion DB 자동 기록 + 바차트 포함 보고서 페이지 자동 생성</td></tr><tr><td>데일리로 데이터 추적 불가</td><td class="m-mid">데이터 누적</td><td>Google Sheets에 데일리로 누적 업데이트 + 서식 자동 적용</td></tr><tr><td>보고서 수동 제작</td><td class="m-mid">보고서 제작</td><td>Notion 보고서 자동 제작</td></tr></tbody></table>
+<table class="cmp-table"><thead><tr><th class="h-left">기존 방식</th><th class="h-mid">구분</th><th class="h-right">자동화 후</th></tr></thead><tbody><tr><td>수동 집계</td><td class="m-mid">비교</td><td>자동 분석+매칭</td></tr><tr><td>데일리 추적 불가</td><td class="m-mid">비교</td><td>Google Sheets 누적 업데이트</td></tr><tr><td>수동 복붙</td><td class="m-mid">비교</td><td>Notion 자동 기록</td></tr><tr><td>보고서 수동 제작</td><td class="m-mid">비교</td><td>Notion 보고서 자동 제작</td></tr></tbody></table>
 <span class="slide-footer">2026.04</span><span class="corner-sq"></span>
 
 ---
@@ -378,7 +378,7 @@ style: |
 # 현재 구현 단계
 <p class="slide-sub">자동화 전·후 비교</p>
 
-<table class="cmp-table"><thead><tr><th class="h-left">기존 방식</th><th class="h-mid">구분</th><th class="h-right">자동화 후</th></tr></thead><tbody><tr><td>신청자 수, 완강자 수, 결제자 수 수동 집계</td><td class="m-mid">데이터 분석</td><td>주요 수치 자동 분석 후 시트 업데이트 + 결제자 자동 매칭 및 분석</td></tr><tr><td>수치 수동 복붙, 고객사별 보고서 별도 생성</td><td class="m-mid">보고서</td><td>Notion DB 자동 기록 + 바차트 포함 보고서 페이지 자동 생성</td></tr><tr><td>데일리로 데이터 추적 불가</td><td class="m-mid">데이터 누적</td><td>Google Sheets에 데일리로 누적 업데이트 + 서식 자동 적용</td></tr><tr><td>보고서 수동 제작</td><td class="m-mid">보고서 제작</td><td>Notion 보고서 자동 제작</td></tr></tbody></table>
+<table class="cmp-table"><thead><tr><th class="h-left">기존 방식</th><th class="h-mid">구분</th><th class="h-right">자동화 후</th></tr></thead><tbody><tr><td>수동 집계</td><td class="m-mid">비교</td><td>자동 분석+매칭</td></tr><tr><td>데일리 추적 불가</td><td class="m-mid">비교</td><td>Google Sheets 누적 업데이트</td></tr><tr><td>수동 복붙</td><td class="m-mid">비교</td><td>Notion 자동 기록</td></tr><tr><td>보고서 수동 제작</td><td class="m-mid">비교</td><td>Notion 보고서 자동 제작</td></tr></tbody></table>
 <span class="slide-footer">2026.04</span><span class="corner-sq"></span>
 
 ---
@@ -386,7 +386,7 @@ style: |
 # 현재 구현 단계
 <p class="slide-sub">자동화 전·후 비교</p>
 
-<table class="cmp-table"><thead><tr><th class="h-left">기존 방식</th><th class="h-mid">구분</th><th class="h-right">자동화 후</th></tr></thead><tbody><tr><td>신청자 수, 완강자 수, 결제자 수 수동 집계</td><td class="m-mid">데이터 분석</td><td>주요 수치 자동 분석 후 시트 업데이트 + 결제자 자동 매칭 및 분석</td></tr><tr><td>수치 수동 복붙, 고객사별 보고서 별도 생성</td><td class="m-mid">보고서</td><td>Notion DB 자동 기록 + 바차트 포함 보고서 페이지 자동 생성</td></tr><tr><td>데일리로 데이터 추적 불가</td><td class="m-mid">데이터 누적</td><td>Google Sheets에 데일리로 누적 업데이트 + 서식 자동 적용</td></tr><tr><td>보고서 수동 제작</td><td class="m-mid">보고서 제작</td><td>Notion 보고서 자동 제작</td></tr></tbody></table>
+<table class="cmp-table"><thead><tr><th class="h-left">기존 방식</th><th class="h-mid">구분</th><th class="h-right">자동화 후</th></tr></thead><tbody><tr><td>수동 집계</td><td class="m-mid">비교</td><td>자동 분석+매칭</td></tr><tr><td>데일리 추적 불가</td><td class="m-mid">비교</td><td>Google Sheets 누적 업데이트</td></tr><tr><td>수동 복붙</td><td class="m-mid">비교</td><td>Notion 자동 기록</td></tr><tr><td>보고서 수동 제작</td><td class="m-mid">비교</td><td>Notion 보고서 자동 제작</td></tr></tbody></table>
 <span class="slide-footer">2026.04</span><span class="corner-sq"></span>
 
 ---
@@ -394,7 +394,7 @@ style: |
 # 현재 구현 단계
 <p class="slide-sub">자동화 전·후 비교</p>
 
-<table class="cmp-table"><thead><tr><th class="h-left">기존 방식</th><th class="h-mid">구분</th><th class="h-right">자동화 후</th></tr></thead><tbody><tr><td>신청자 수, 완강자 수, 결제자 수 수동 집계</td><td class="m-mid">데이터 분석</td><td>주요 수치 자동 분석 후 시트 업데이트 + 결제자 자동 매칭 및 분석</td></tr><tr><td>수치 수동 복붙, 고객사별 보고서 별도 생성</td><td class="m-mid">보고서</td><td>Notion DB 자동 기록 + 바차트 포함 보고서 페이지 자동 생성</td></tr><tr><td>데일리로 데이터 추적 불가</td><td class="m-mid">데이터 누적</td><td>Google Sheets에 데일리로 누적 업데이트 + 서식 자동 적용</td></tr><tr><td>보고서 수동 제작</td><td class="m-mid">보고서 제작</td><td>Notion 보고서 자동 제작</td></tr></tbody></table>
+<table class="cmp-table"><thead><tr><th class="h-left">기존 방식</th><th class="h-mid">구분</th><th class="h-right">자동화 후</th></tr></thead><tbody><tr><td>수동 집계</td><td class="m-mid">비교</td><td>자동 분석+매칭</td></tr><tr><td>데일리 추적 불가</td><td class="m-mid">비교</td><td>Google Sheets 누적 업데이트</td></tr><tr><td>수동 복붙</td><td class="m-mid">비교</td><td>Notion 자동 기록</td></tr><tr><td>보고서 수동 제작</td><td class="m-mid">비교</td><td>Notion 보고서 자동 제작</td></tr></tbody></table>
 <span class="slide-footer">2026.04</span><span class="corner-sq"></span>
 
 ---
